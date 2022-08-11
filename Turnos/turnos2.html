@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Turnos.  </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Around - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://around.createx.studio/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://around.createx.studio/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://around.createx.studio/favicon-16x16.png">
+    <link rel="manifest" href="https://around.createx.studio/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="https://around.createx.studio/safari-pinned-tab.svg">
+    <link href="/PROYECTO/Turnos/ rel="stylesheet">
+    <link rel="stylesheet" href="Calendario_archivos/font-awesome.min.css">
+    <link rel="stylesheet" href="Calendario_archivos/style.css">
+    <script defer="defer" referrerpolicy="origin" src="Calendario_archivos/s"></script><script nonce="f57cbeb3-d4f4-4208-bf95-9eeb80360b75">(function(w,d){!function(a,e,t,r){a.zarazData=a.zarazData||{},a.zarazData.executed=[],a.zaraz={deferred:[]},a.zaraz.q=[],a.zaraz._f=function(e){return function(){var t=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:t})}};for(const e of["track","set","ecommerce","debug"])a.zaraz[e]=a.zaraz._f(e);a.zaraz.init=()=>{var t=e.getElementsByTagName(r)[0],z=e.createElement(r),n=e.getElementsByTagName("title")[0];for(n&&(a.zarazData.t=e.getElementsByTagName("title")[0].text),a.zarazData.x=Math.random(),a.zarazData.w=a.screen.width,a.zarazData.h=a.screen.height,a.zarazData.j=a.innerHeight,a.zarazData.e=a.innerWidth,a.zarazData.l=a.location.href,a.zarazData.r=e.referrer,a.zarazData.k=a.screen.colorDepth,a.zarazData.n=e.characterSet,a.zarazData.o=(new Date).getTimezoneOffset(),a.zarazData.q=[];a.zaraz.q.length;){const e=a.zaraz.q.shift();a.zarazData.q.push(e)}z.defer=!0;for(const e of[localStorage,sessionStorage])Object.keys(e||{}).filter((a=>a.startsWith("_zaraz_"))).forEach((t=>{try{a.zarazData["z_"+t.slice(7)]=JSON.parse(e.getItem(t))}catch{a.zarazData["z_"+t.slice(7)]=e.getItem(t)}}));z.referrerPolicy="origin",z.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a.zarazData))),t.parentNode.insertBefore(z,t)},["complete","interactive"].includes(e.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,0,"script");})(window,document);</script>
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script async="" src="Preview%20-%20Bootstrap%20Themes_archivos/gtm"></script><script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="Preview%20-%20Bootstrap%20Themes_archivos/simplebar.min.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="Preview%20-%20Bootstrap%20Themes_archivos/theme.min.css">
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WKV3GT5');
+    </script>
+  </head>
+  <!-- Body-->
+  <body cz-shortcut-listen="true">
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+    <!-- Page loading spinner-->
+    
+    <main class="page-wrapper">
+      <!-- Navbar Floating light for Index page only-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header class="header navbar  navbar-floating navbar-sticky navbar-stuck" data-fixed-element="" style="background-color:rgb(66, 142, 223) ;">
+        <nav class="navbar navbar-lg navbar-expand-lg navbar-sticky navbar-dark navbar-absolute w-100" style="background-color:rgb(66, 142, 223);">
+          <div class="container">
+            <a class="navbar-brand" href="/pagina_principal/index.php">Turnos.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Información
+                  </a>
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  Historial Médico
+                  </a>
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link " href="#" role="button" aria-haspopup="true" aria-expanded="true">
+                    Mis Turnos
+                  </a>
+      
+                </li>
+              </ul>
+              <ul class="navbar-nav ms-auto">
+                <li>
+                  <a class="nav-link" href="https://themes.getbootstrap.com/product/robust-ui-kit-dashboard-landing/" target="_blank">
+                    <img src="/proy_int/Robust UI Kit_archivos/img/usuario.png" alt="" width="40px" class="shadow-sm">
+                  </a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Page content-->
+      <!-- Intro-->
+      <section class=" align-items-center position-relative bg-size-cover bg-position-center min-vh-100 overflow-hidden pt-6 pb-lg-5" style="background-color: rgb(66, 142, 223)  ;">
+        <section class="py-1 py-md-6 pb-lg-1 mb-2 " style="background-color:rgb(66, 142, 223) ;">
+          <div class="container pb-3 pt-4 pb-lg-2 bg-light border rounded-3">
+            <div class="row justify-content-center mb-4 pb-2">
+              <div class="col-xl-6 col-lg-7 col-md-8">
+                <h2 class="h1 mb-4 text-center">Escoja una<span class="bg-faded-primary rounded text-primary px-3 py-2">especialidad</span></h2>
+                <p class="text-muted text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptatem placeat impedit
+                  cupiditate culpa ducimus nemo quae aperiam consequuntur voluptate, voluptatum reiciendis modi praesentium aspernatur sit id 
+                  quos commodi mollitia!</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="nav nav-tabs media-tabs justify-content-center justify-content-lg-start" role="tablist">
+                  <li class="nav-item mb-3" style="width: 16.5rem;">
+                    <a class="nav-link me-2 active" href="#pediatria" data-bs-toggle="tab" role="tab">
+                      <div class="d-flex align-items-center"><img class="rounded" src="img/icon/pediatra.png" alt="User Account" width="60">
+                        <div class="w-100 ps-2 ms-1">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="fs-sm pe-1">Pediatría</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item mb-3" style="width: 16.5rem;">
+                    <a class="nav-link me-2" href="#cardiologia" data-bs-toggle="tab" role="tab">
+                      <div class="d-flex align-items-center">
+                        <img class="rounded" src="img/icon/enfermero.png" alt="Portfolio" width="60">
+                        <div class="w-100 ps-2 ms-1">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="fs-sm pe-1">Cardiología</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item mb-3" style="width: 16.5rem;">
+                    <a class="nav-link me-2" href="#obstetricia" data-bs-toggle="tab" role="tab">
+                      <div class="d-flex align-items-center"><img class="rounded" src="img/icon/doctor.png" alt="Obstetricia" width="60">
+                        <div class="w-100 ps-2 ms-1">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="fs-sm pe-1">Obstetricia</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item mb-3" style="width: 16.5rem;">
+                    <a class="nav-link me-2" href="#kinesiologia" data-bs-toggle="tab" role="tab">
+                      <div class="d-flex align-items-center"><img class="rounded" src="img/icon/cirujano.png" alt="Kinesiología" width="60">
+                        <div class="w-100 ps-2 ms-1">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="fs-sm pe-1">Kinesiología</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item mb-3" style="width: 16.5rem;">
+                    <a class="nav-link me-2" href="#odontologia" data-bs-toggle="tab" role="tab">
+                      <div class="d-flex align-items-center"><img class="rounded" src="img/icon/enfermero(1).png" alt="Odontología" width="60">
+                        <div class="w-100 ps-2 ms-1">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="fs-sm pe-1">Odontología</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="nav-item mb-3" style="width: 16.5rem;">
+                    <a class="nav-link me-2" href="#oftalmologia" data-bs-toggle="tab" role="tab">
+                      <div class="d-flex align-items-center"><img class="rounded" src="img/icon/enfermero.png" alt="Oftalmología" width="60">
+                        <div class="w-100 ps-2 ms-1">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="fs-sm pe-1">Oftalmología</div><i class="ai-chevron-right lead ms-2 me-1"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="pediatria">
+                    <div class="row text-center text-sm-start">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <h3 class="h5 mb-4">Hospitales Disponibles</h3>
+                        <ul class="list-unstyled">
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio González Lelong</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Distrital N°8</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Hospital La Madre y el Niño</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Central</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio Formosa</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Clinica Dr. Jorge Versalovich</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Centro de Salud Republica Argentina</a></li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="cardiologia">
+                    <div class="row text-center text-sm-start">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <h3 class="h5 mb-4">Hospitales Disponibles</h3>
+                        <ul class="list-unstyled">
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio González Lelong</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Distrital N°8</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Hospital La Madre y el Niño</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Central</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio Formosa</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Clinica Dr. Jorge Versalovich</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Centro de Salud Republica Argentina</a></li>
+                        </ul>
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="obstetricia">
+                    <div class="row text-center text-sm-start">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <h3 class="h5 mb-4">Hospitales Disponibles</h3>
+                        <ul class="list-unstyled">
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio González Lelong</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Distrital N°8</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Hospital La Madre y el Niño</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Central</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio Formosa</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Clinica Dr. Jorge Versalovich</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Centro de Salud Republica Argentina</a></li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="kinesiologia">
+                    <div class="row text-center text-sm-start">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <h3 class="h5 mb-4">Hospitales Disponibles</h3>
+                        <ul class="list-unstyled">
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio González Lelong</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Distrital N°8</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Hospital La Madre y el Niño</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Central</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio Formosa</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Clinica Dr. Jorge Versalovich</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Centro de Salud Republica Argentina</a></li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="odontologia">
+                    <div class="row text-center text-sm-start">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <h3 class="h5 mb-4">Hospitales Disponibles</h3>
+                        <ul class="list-unstyled">
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio González Lelong</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Distrital N°8</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Hospital La Madre y el Niño</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Central</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio Formosa</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Clinica Dr. Jorge Versalovich</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Centro de Salud Republica Argentina</a></li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="oftalmologia">
+                    <div class="row text-center text-sm-start">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                        <h3 class="h5 mb-4">Hospitales Disponibles</h3>
+                        <ul class="list-unstyled">
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio González Lelong</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Distrital N°8</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Hospital La Madre y el Niño</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none"  href="#calendario">Hospital Central</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Sanatorio Formosa</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Clinica Dr. Jorge Versalovich</a></li>
+                          <li class="mb-3"><a class="fw-medium text-decoration-none" href="#calendario">Centro de Salud Republica Argentina</a></li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fade active show" id="calendario">
+              <section class="ftco-section">
+                <div class="container">
+                    <div class="row">
+                      <h3 class="h3 mb-4 text-center">Escoja día y horario.</span></h2>
+                      <div class="col-md-6 date-picker">
+                        <input type="date" class="form-control">
+                      </div>
+                      <div class="col-md-6" >
+                        <input type="time"  class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <div class="text-center col-lg-12" >
+                  <a class='btn btn-primary btn-lg mr-lg-3 my-1 col-lg-6' href='../pagina_principal/index.php' role='button'>Enviar</a>
+                </div>
+                
+            </div>
+          </div>
+        </section>
+      </section>
+      
+    </main>
+    <footer class="footer bg-dark pt-5 pt-md-6 pt-lg-7">
+      <div class="container pt-3 pt-md-0">
+        <hr class="hr-light my-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-7 pb-md-4 text-center">
+            <h4 class="text-light mb-grid-gutter">Subscribe to Newsletter</h4>
+            <form class="subscription-form validate" action="https://studio.us12.list-manage.com/subscribe/post?u=c7103e2c981361a6639545bd5&amp;amp;id=29ca296126" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+              <div class="input-group flex-nowrap"><i class="ai-mail position-absolute top-50 start-0 translate-middle-y text-muted ms-3"></i>
+                <input class="form-control rounded-start" type="email" name="EMAIL" placeholder="Your email">
+                <button class="btn btn-primary" type="submit" name="subscribe">Subscribe*</button>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input class="subscription-form-antispam" type="text" name="b_c7103e2c981361a6639545bd5_29ca296126" tabindex="-1">
+              </div>
+              <div class="form-text text-light opacity-50">*Subscribe to our newsletter to receive early discount offers and new templates info.</div>
+              <div class="subscription-status"></div>
+            </form>
+          </div>
+        </div>
+        <hr class="hr-light my-5">
+        <p class="fs-sm text-center mb-0 pb-5"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://createx.studio/" target="_blank" rel="noopener">Createx Studio</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button-->
+    <a class="btn-scroll-top show" href="#top" data-scroll="" data-fixed-element="">
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><img src="/proy_int/img/icon/up-arrow.png" alt=""></i>
+    </a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="Preview%20-%20Bootstrap%20Themes_archivos/bootstrap.bundle.min.js"></script>
+    <script src="Preview%20-%20Bootstrap%20Themes_archivos/simplebar.min.js"></script>
+    <script src="Preview%20-%20Bootstrap%20Themes_archivos/smooth-scroll.polyfills.min.js"></script>
+    <script src="Preview%20-%20Bootstrap%20Themes_archivos/parallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="Preview%20-%20Bootstrap%20Themes_archivos/theme.min.js"></script>
+    <script src="Calendario_archivos/jquery.min.js"></script>
+    <script src="Calendario_archivos/popper.js+bootstrap.min.js.pagespeed.jc.9QM1F2U496.js"></script>
+    <script>eval(mod_pagespeed_d_3xTCmj_W);</script>
+    <script>eval(mod_pagespeed_72yOIcwSMU);</script>
+    <script src="Calendario_archivos/main.js"></script>
+    <script defer="defer" src="Calendario_archivos/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon="{&quot;rayId&quot;:&quot;72375e966a03a780&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2022.6.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous">
+    </script>
+
+</body></html>
